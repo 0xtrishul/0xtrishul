@@ -48,7 +48,7 @@
 
 </td>
 <td valign="top">
-<img width="520" height="769" alt="Image" src="https://github.com/user-attachments/assets/879a0350-b2a4-45cd-9211-1d3f9860e185" />
+<img width="520" height="800" alt="Image" src="https://github.com/user-attachments/assets/879a0350-b2a4-45cd-9211-1d3f9860e185" />
 </td>
 </tr>
 </table>
