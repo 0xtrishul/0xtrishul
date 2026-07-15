@@ -1,3 +1,4 @@
+<img width=100% src="https://capsule-render.vercel.app/api?type=waving&height=115&color=9E9E9E&fontAlign=0&fontAlignY=0"/>
 <table>
 <tr>
 <td valign="top">
@@ -46,3 +47,4 @@
 </td>
 </tr>
 </table>
+<img width=100% src="https://capsule-render.vercel.app/api?type=waving&height=115&color=9E9E9E&section=footer"/>
