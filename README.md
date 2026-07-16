@@ -16,10 +16,9 @@
   ╚════════════════════════════════════════════════╝ 
   [*] initializing operator profile ...
   [+] offensive security     loaded 
-  [+] adversary emulation    loaded                         
-  [+] reverse engineering    loaded 
-  [+] exploit development    loaded
-  [i] 4 modules ready — standing by
+  [+] adversary emulation    loaded                          
+  [+] malware researching    loaded
+  [i] 3 modules ready — standing by
 
 
   └─$ _ 
