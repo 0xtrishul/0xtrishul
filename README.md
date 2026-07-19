@@ -35,8 +35,6 @@
 <br/><br/>
 <b>// arsenal</b><br/>
 <img src="https://img.shields.io/badge/Ghidra-1c1c1c?style=flat-square&logo=ghidra&logoColor=white" />
-<img src="https://img.shields.io/badge/GDB_+_pwndbg-1c1c1c?style=flat-square&logo=gnu&logoColor=white" />
-<img src="https://img.shields.io/badge/pwntools-1c1c1c?style=flat-square&logoColor=white" />
 <img src="https://img.shields.io/badge/NetExec-1c1c1c?style=flat-square&logoColor=white" />
 <img src="https://img.shields.io/badge/BloodHound-1c1c1c?style=flat-square&logoColor=white" />
 <img src="https://img.shields.io/badge/Linux-1c1c1c?style=flat-square&logo=linux&logoColor=white" />
