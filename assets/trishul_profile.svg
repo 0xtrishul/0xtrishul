@@ -1,0 +1,208 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 720 440" width="100%" height="100%">
+  <defs>
+    <pattern id="grid" width="30" height="30" patternUnits="userSpaceOnUse">
+      <path d="M 30 0 L 0 0 0 30" fill="none" stroke="var(--grid-color)" stroke-width="0.5"/>
+    </pattern>
+    <radialGradient id="ambientGlow" cx="42%" cy="46%" r="60%">
+      <stop offset="0%" stop-color="var(--bg-glow)"/>
+      <stop offset="100%" stop-color="rgba(0,0,0,0)"/>
+    </radialGradient>
+    <linearGradient id="sweep" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="rgba(209,48,48,0)"/>
+      <stop offset="50%" stop-color="rgba(209,48,48,0.10)"/>
+      <stop offset="100%" stop-color="rgba(209,48,48,0)"/>
+    </linearGradient>
+    <style>
+      :root {
+        --text-primary:#ded9d3;
+        --text-secondary:#8c847c;
+        --text-tertiary:#5b544d;
+        --border-color:rgba(209,48,48,0.28);
+        --grid-color:rgba(209,48,48,0.05);
+        --bg-glow:rgba(158,29,29,0.10);
+        --red:#d13030;
+        --red-deep:#9e1d1d;
+        --bone:#e2ddd6;
+      }
+      @media (prefers-color-scheme: light) {
+        :root {
+          --text-primary:#1a1614;
+          --text-secondary:#4a423c;
+          --text-tertiary:#8a827c;
+          --border-color:rgba(158,29,29,0.40);
+          --grid-color:rgba(158,29,29,0.05);
+          --bg-glow:rgba(158,29,29,0.04);
+        }
+      }
+      @keyframes cursorBlink { 0%,49%{opacity:1} 50%,100%{opacity:0} }
+      @keyframes spin1 { 0%,24%{opacity:1} 25%,100%{opacity:0} }
+      @keyframes spin2 { 0%,24%{opacity:0} 25%,49%{opacity:1} 50%,100%{opacity:0} }
+      @keyframes spin3 { 0%,49%{opacity:0} 50%,74%{opacity:1} 75%,100%{opacity:0} }
+      @keyframes spin4 { 0%,74%{opacity:0} 75%,99%{opacity:1} 100%{opacity:0} }
+      @keyframes monitorSweep { 0%{transform:translateY(0)} 100%{transform:translateY(300px)} }
+      @keyframes glitchNormal { 0%,94%{opacity:1} 95%,96%{opacity:0} 97%{opacity:1} 98%,99%{opacity:0} 100%{opacity:1} }
+      @keyframes glitchCorrupt { 0%,94%{opacity:0} 95%,96%{opacity:1} 97%{opacity:0} 98%,99%{opacity:1} 100%{opacity:0} }
+      @keyframes loadA { 0%,33%{opacity:1} 34%,100%{opacity:0} }
+      @keyframes loadB { 0%,33%{opacity:0} 34%,66%{opacity:1} 67%,100%{opacity:0} }
+      @keyframes loadC { 0%,66%{opacity:0} 67%,99%{opacity:1} 100%{opacity:0} }
+      @keyframes blinkA { 0%,100%{opacity:0} 10%,14%{opacity:0.9} }
+      @keyframes blinkB { 0%,100%{opacity:0} 44%,50%{opacity:0.85} }
+      @keyframes blinkC { 0%,100%{opacity:0} 70%,74%{opacity:1} }
+      @keyframes blinkD { 0%,100%{opacity:0} 24%,27%{opacity:0.7} 58%,61%{opacity:0.9} }
+      @keyframes blinkE { 0%,100%{opacity:0} 6%,9%{opacity:1} }
+      @keyframes blinkF { 0%,100%{opacity:0} 80%,86%{opacity:0.8} }
+      .cur { animation:cursorBlink 1s step-end infinite; }
+      .s1{animation:spin1 1.2s step-end infinite} .s2{animation:spin2 1.2s step-end infinite}
+      .s3{animation:spin3 1.2s step-end infinite} .s4{animation:spin4 1.2s step-end infinite}
+      .sweep{animation:monitorSweep 7s linear infinite}
+      .hn{animation:glitchNormal 3s infinite} .hc{animation:glitchCorrupt 3s infinite}
+      .la{animation:loadA 6s step-end infinite} .lb{animation:loadB 6s step-end infinite} .lc{animation:loadC 6s step-end infinite}
+      .bkA{animation:blinkA 2.3s step-end infinite} .bkB{animation:blinkB 3.1s step-end infinite} .bkC{animation:blinkC 1.7s step-end infinite}
+      .bkD{animation:blinkD 4.3s step-end infinite} .bkE{animation:blinkE 2.9s step-end infinite} .bkF{animation:blinkF 3.7s step-end infinite}
+    </style>
+  </defs>
+
+  <rect width="720" height="440" fill="none"/>
+  <rect width="720" height="440" fill="url(#grid)"/>
+  <rect width="720" height="440" fill="url(#ambientGlow)"/>
+
+  <!-- HEADER -->
+  <g transform="translate(40, 42)" font-family="'JetBrains Mono','Courier New',monospace" font-size="10.5">
+    <text x="0" y="0">
+      <tspan fill="var(--text-secondary)">--=[</tspan>
+      <tspan fill="var(--red)" font-weight="bold"> trishul </tspan>
+      <tspan fill="var(--text-primary)">Vol 0x01, Issue 0x03, File 0x01 of 0x01</tspan>
+      <tspan fill="var(--text-secondary)"> ]=--</tspan>
+    </text>
+    <line x1="0" y1="10" x2="640" y2="10" stroke="var(--border-color)" stroke-width="0.8"/>
+  </g>
+
+  <!-- LEFT: ASCII SYMBOL -->
+  <g transform="translate(40, 92)">
+    <rect x="0" y="0" width="232" height="322" fill="none" stroke="var(--border-color)" stroke-width="0.8"/>
+    <g transform="translate(2.7, 28.2)" font-family="'JetBrains Mono','Courier New',monospace" font-size="5.9" letter-spacing="0">
+        <text x="0" y="0.0" xml:space="preserve"><tspan fill="transparent">                                                                </tspan></text>
+        <text x="0" y="5.9" xml:space="preserve"><tspan fill="transparent">                                                                </tspan></text>
+        <text x="0" y="11.8" xml:space="preserve"><tspan fill="transparent">                                              </tspan><tspan fill="#d13030">░</tspan><tspan fill="transparent">                 </tspan></text>
+        <text x="0" y="17.7" xml:space="preserve"><tspan fill="transparent">                 </tspan><tspan fill="#e2ddd6">▒</tspan><tspan fill="transparent">                            </tspan><tspan fill="#d13030">▒</tspan><tspan fill="#e2ddd6"> </tspan><tspan fill="transparent">     </tspan><tspan fill="#e2ddd6"> ░</tspan><tspan fill="transparent">         </tspan></text>
+        <text x="0" y="23.6" xml:space="preserve"><tspan fill="transparent">                </tspan><tspan fill="#e2ddd6"> █</tspan><tspan fill="transparent">   </tspan><tspan fill="#d13030">░▒▒</tspan><tspan fill="transparent">   </tspan><tspan fill="#e2ddd6">░</tspan><tspan fill="transparent">                 </tspan><tspan fill="#d13030">░▒</tspan><tspan fill="transparent">     </tspan><tspan fill="#d13030">░░</tspan><tspan fill="transparent">          </tspan></text>
+        <text x="0" y="29.5" xml:space="preserve"><tspan fill="transparent">                 </tspan><tspan fill="#e2ddd6">██</tspan><tspan fill="transparent">   </tspan><tspan fill="#d13030">░</tspan><tspan fill="transparent">  </tspan><tspan fill="#e2ddd6"> ▓░</tspan><tspan fill="transparent">               </tspan><tspan fill="#d13030">░▒▒░</tspan><tspan fill="transparent">    </tspan><tspan fill="#d13030">░▒</tspan><tspan fill="transparent">           </tspan></text>
+        <text x="0" y="35.4" xml:space="preserve"><tspan fill="transparent">                  </tspan><tspan fill="#e2ddd6">███▓▒▓██░</tspan><tspan fill="transparent">             </tspan><tspan fill="#e2ddd6"> </tspan><tspan fill="#d13030">░▒▒▒</tspan><tspan fill="#e2ddd6">░</tspan><tspan fill="transparent">    </tspan><tspan fill="#d13030">░▒</tspan><tspan fill="#e2ddd6"> </tspan><tspan fill="transparent">      </tspan><tspan fill="#e2ddd6">░ </tspan><tspan fill="transparent">   </tspan></text>
+        <text x="0" y="41.3" xml:space="preserve"><tspan fill="transparent">                   </tspan><tspan fill="#e2ddd6">░▓██▓▒ </tspan><tspan fill="transparent">            </tspan><tspan fill="#e2ddd6"> </tspan><tspan fill="#d13030">░▒▒▒░</tspan><tspan fill="transparent">    </tspan><tspan fill="#e2ddd6"> </tspan><tspan fill="#d13030">▒▒░</tspan><tspan fill="transparent">    </tspan><tspan fill="#e2ddd6"> </tspan><tspan fill="#d13030">░░░</tspan><tspan fill="#e2ddd6"> </tspan><tspan fill="transparent">   </tspan></text>
+        <text x="0" y="47.2" xml:space="preserve"><tspan fill="transparent">                      </tspan><tspan fill="#d13030"> ░</tspan><tspan fill="transparent">   </tspan><tspan fill="#e2ddd6"> </tspan><tspan fill="#d13030">░░░</tspan><tspan fill="transparent">      </tspan><tspan fill="#d13030">░▒▒▒░</tspan><tspan fill="transparent">     </tspan><tspan fill="#d13030">░▒▒▒</tspan><tspan fill="transparent">    </tspan><tspan fill="#d13030">░▒░</tspan><tspan fill="transparent">      </tspan></text>
+        <text x="0" y="53.1" xml:space="preserve"><tspan fill="transparent">               </tspan><tspan fill="#e2ddd6">░</tspan><tspan fill="#d13030">▒░░</tspan><tspan fill="#e2ddd6">░</tspan><tspan fill="transparent"> </tspan><tspan fill="#d13030">░▒░▒</tspan><tspan fill="transparent"> </tspan><tspan fill="#d13030">░░</tspan><tspan fill="#e2ddd6"> </tspan><tspan fill="#d13030">▒░</tspan><tspan fill="transparent"> </tspan><tspan fill="#e2ddd6">  </tspan><tspan fill="transparent">  </tspan><tspan fill="#e2ddd6"> </tspan><tspan fill="#d13030">▒▒▒</tspan><tspan fill="#e2ddd6"> </tspan><tspan fill="transparent">     </tspan><tspan fill="#d13030">░▒▒▒</tspan><tspan fill="#e2ddd6"> </tspan><tspan fill="transparent">   </tspan><tspan fill="#d13030">░▒▒</tspan><tspan fill="transparent">       </tspan></text>
+        <text x="0" y="59.0" xml:space="preserve"><tspan fill="transparent">                </tspan><tspan fill="#d13030">▒░</tspan><tspan fill="transparent"> </tspan><tspan fill="#d13030">░░▒</tspan><tspan fill="#e2ddd6">░</tspan><tspan fill="transparent"> </tspan><tspan fill="#d13030">░▒░</tspan><tspan fill="transparent">  </tspan><tspan fill="#d13030">░░</tspan><tspan fill="#e2ddd6">░</tspan><tspan fill="#d13030">░░░</tspan><tspan fill="#e2ddd6">  </tspan><tspan fill="#d13030">▒▒░</tspan><tspan fill="transparent">    </tspan><tspan fill="#e2ddd6">  </tspan><tspan fill="#d13030">▒▒▒░</tspan><tspan fill="transparent">    </tspan><tspan fill="#d13030">▒▒░</tspan><tspan fill="transparent">       </tspan></text>
+        <text x="0" y="64.9" xml:space="preserve"><tspan fill="transparent">           </tspan><tspan fill="#e2ddd6">░</tspan><tspan fill="#d13030">░░░</tspan><tspan fill="#e2ddd6"> </tspan><tspan fill="#d13030">▒░</tspan><tspan fill="transparent">  </tspan><tspan fill="#d13030">▒░</tspan><tspan fill="transparent">   </tspan><tspan fill="#e2ddd6"> </tspan><tspan fill="#d13030">░</tspan><tspan fill="#e2ddd6"> </tspan><tspan fill="transparent"> </tspan><tspan fill="#d13030">░▒</tspan><tspan fill="transparent">  </tspan><tspan fill="#d13030">▒░</tspan><tspan fill="transparent">  </tspan><tspan fill="#d13030">░▒▒</tspan><tspan fill="#e2ddd6"> </tspan><tspan fill="transparent">   </tspan><tspan fill="#d13030">▒▒▒░░</tspan><tspan fill="transparent">    </tspan><tspan fill="#d13030">░▒▒</tspan><tspan fill="#e2ddd6"> </tspan><tspan fill="transparent">       </tspan></text>
+        <text x="0" y="70.8" xml:space="preserve"><tspan fill="transparent">           </tspan><tspan fill="#e2ddd6"> </tspan><tspan fill="#d13030">░░</tspan><tspan fill="transparent">  </tspan><tspan fill="#d13030">░▒</tspan><tspan fill="transparent"> </tspan><tspan fill="#e2ddd6"> </tspan><tspan fill="#d13030">▒</tspan><tspan fill="transparent">     </tspan><tspan fill="#d13030">░░</tspan><tspan fill="transparent"> </tspan><tspan fill="#d13030">░░</tspan><tspan fill="transparent"> </tspan><tspan fill="#d13030">░▒</tspan><tspan fill="transparent">    </tspan><tspan fill="#d13030">░▒▒▒░▒▒▒▒░</tspan><tspan fill="transparent">     </tspan><tspan fill="#d13030">░▒▒</tspan><tspan fill="transparent">        </tspan></text>
+        <text x="0" y="76.7" xml:space="preserve"><tspan fill="transparent">             </tspan><tspan fill="#d13030">░▒</tspan><tspan fill="transparent">  </tspan><tspan fill="#d13030">░░</tspan><tspan fill="transparent"> </tspan><tspan fill="#d13030">░</tspan><tspan fill="transparent">     </tspan><tspan fill="#d13030">░</tspan><tspan fill="#e2ddd6">░░</tspan><tspan fill="#d13030">░</tspan><tspan fill="transparent"> </tspan><tspan fill="#d13030">░▒</tspan><tspan fill="#e2ddd6"> ░</tspan><tspan fill="#d13030">░░</tspan><tspan fill="transparent">  </tspan><tspan fill="#e2ddd6"> </tspan><tspan fill="#d13030">░░▒▒▒▒░</tspan><tspan fill="transparent">     </tspan><tspan fill="#e2ddd6"> </tspan><tspan fill="#d13030">▒▒░</tspan><tspan fill="transparent">        </tspan></text>
+        <text x="0" y="82.6" xml:space="preserve"><tspan fill="transparent">              </tspan><tspan fill="#d13030">░▒░</tspan><tspan fill="#e2ddd6"> </tspan><tspan fill="#d13030">░░</tspan><tspan fill="#e2ddd6">░</tspan><tspan fill="#d13030">░</tspan><tspan fill="transparent">    </tspan><tspan fill="#e2ddd6">░░</tspan><tspan fill="#d13030">░░░░</tspan><tspan fill="transparent">  </tspan><tspan fill="#d13030">░░░</tspan><tspan fill="#e2ddd6"> </tspan><tspan fill="transparent">   </tspan><tspan fill="#d13030">░▒▒▒▒▒</tspan><tspan fill="#e2ddd6">░</tspan><tspan fill="transparent">   </tspan><tspan fill="#e2ddd6">░</tspan><tspan fill="#d13030">▒▒▒</tspan><tspan fill="#e2ddd6"> </tspan><tspan fill="transparent">        </tspan></text>
+        <text x="0" y="88.5" xml:space="preserve"><tspan fill="transparent">           </tspan><tspan fill="#d13030">░▒░</tspan><tspan fill="transparent">  </tspan><tspan fill="#d13030">░░</tspan><tspan fill="#e2ddd6">░</tspan><tspan fill="#d13030">░░</tspan><tspan fill="#e2ddd6">░ </tspan><tspan fill="transparent">   </tspan><tspan fill="#e2ddd6"> ░░░</tspan><tspan fill="transparent"> </tspan><tspan fill="#e2ddd6"> </tspan><tspan fill="#d13030">░▒░</tspan><tspan fill="#e2ddd6">░██▒</tspan><tspan fill="transparent"> </tspan><tspan fill="#e2ddd6"> </tspan><tspan fill="#d13030">▒▒▒░░▒▒▒▒▒▒▒▒░</tspan><tspan fill="transparent">         </tspan></text>
+        <text x="0" y="94.4" xml:space="preserve"><tspan fill="transparent">           </tspan><tspan fill="#d13030">░░░░░░</tspan><tspan fill="#e2ddd6"> </tspan><tspan fill="#d13030">░░</tspan><tspan fill="#e2ddd6">░░</tspan><tspan fill="transparent"> </tspan><tspan fill="#e2ddd6">░</tspan><tspan fill="#d13030">░</tspan><tspan fill="#e2ddd6">░ ░░</tspan><tspan fill="#d13030">░▒▒░</tspan><tspan fill="transparent"> </tspan><tspan fill="#e2ddd6">░████▒ </tspan><tspan fill="#d13030">░░</tspan><tspan fill="#e2ddd6"> </tspan><tspan fill="transparent">   </tspan><tspan fill="#d13030">░░░░░░</tspan><tspan fill="transparent">           </tspan></text>
+        <text x="0" y="100.3" xml:space="preserve"><tspan fill="transparent">               </tspan><tspan fill="#d13030">░░░░</tspan><tspan fill="#e2ddd6">░ </tspan><tspan fill="transparent"> </tspan><tspan fill="#d13030">░</tspan><tspan fill="#e2ddd6"> </tspan><tspan fill="transparent">  </tspan><tspan fill="#d13030">░░░░▓▒░</tspan><tspan fill="transparent">  </tspan><tspan fill="#e2ddd6">░██▒</tspan><tspan fill="#d13030">░░</tspan><tspan fill="transparent"> </tspan><tspan fill="#e2ddd6">░▒</tspan><tspan fill="transparent">                    </tspan></text>
+        <text x="0" y="106.2" xml:space="preserve"><tspan fill="transparent">                </tspan><tspan fill="#e2ddd6"> </tspan><tspan fill="#d13030">░░▒▓█</tspan><tspan fill="#e2ddd6">████▒</tspan><tspan fill="#d13030">░░░</tspan><tspan fill="#e2ddd6">░</tspan><tspan fill="#d13030">█</tspan><tspan fill="#e2ddd6">██▒ </tspan><tspan fill="transparent">  </tspan><tspan fill="#d13030">░▒▒</tspan><tspan fill="#e2ddd6">████░</tspan><tspan fill="transparent">                  </tspan></text>
+        <text x="0" y="112.1" xml:space="preserve"><tspan fill="transparent">                </tspan><tspan fill="#e2ddd6"> </tspan><tspan fill="#d13030">▓</tspan><tspan fill="#e2ddd6">██████████</tspan><tspan fill="#d13030">▒░</tspan><tspan fill="#e2ddd6"> ░█████████████░</tspan><tspan fill="transparent">                  </tspan></text>
+        <text x="0" y="118.0" xml:space="preserve"><tspan fill="transparent">               </tspan><tspan fill="#e2ddd6"> ████▓░░░▒████</tspan><tspan fill="#d13030">▒░</tspan><tspan fill="transparent">  </tspan><tspan fill="#e2ddd6">░▓███████▒</tspan><tspan fill="transparent">                     </tspan></text>
+        <text x="0" y="123.9" xml:space="preserve"><tspan fill="transparent">               </tspan><tspan fill="#e2ddd6">▒██▒</tspan><tspan fill="transparent">       </tspan><tspan fill="#e2ddd6">████</tspan><tspan fill="#d13030">░░</tspan><tspan fill="transparent">   </tspan><tspan fill="#d13030"> ▒░</tspan><tspan fill="transparent">  </tspan><tspan fill="#e2ddd6">░▒▓███▒░</tspan><tspan fill="transparent">                </tspan></text>
+        <text x="0" y="129.8" xml:space="preserve"><tspan fill="transparent">               </tspan><tspan fill="#e2ddd6"> ▓░</tspan><tspan fill="transparent">     </tspan><tspan fill="#e2ddd6">  </tspan><tspan fill="transparent"> </tspan><tspan fill="#e2ddd6">████ </tspan><tspan fill="#d13030">▒</tspan><tspan fill="transparent">  </tspan><tspan fill="#d13030">░▒░</tspan><tspan fill="transparent"> </tspan><tspan fill="#e2ddd6">░██████████ </tspan><tspan fill="transparent">              </tspan></text>
+        <text x="0" y="135.7" xml:space="preserve"><tspan fill="transparent">                </tspan><tspan fill="#e2ddd6"> </tspan><tspan fill="transparent">        </tspan><tspan fill="#e2ddd6">▓███▓</tspan><tspan fill="transparent"> </tspan><tspan fill="#d13030">▒</tspan><tspan fill="transparent"> </tspan><tspan fill="#d13030">░▒▒</tspan><tspan fill="transparent"> </tspan><tspan fill="#e2ddd6">░█████▓▓█████░</tspan><tspan fill="transparent">             </tspan></text>
+        <text x="0" y="141.6" xml:space="preserve"><tspan fill="transparent">   </tspan><tspan fill="#e2ddd6"> ░ </tspan><tspan fill="transparent">               </tspan><tspan fill="#e2ddd6"> ░▓█████</tspan><tspan fill="transparent"> </tspan><tspan fill="#d13030">░░░▒░</tspan><tspan fill="transparent"> </tspan><tspan fill="#e2ddd6">▒████░</tspan><tspan fill="transparent">    </tspan><tspan fill="#e2ddd6">░████</tspan><tspan fill="transparent">             </tspan></text>
+        <text x="0" y="147.5" xml:space="preserve"><tspan fill="transparent">   </tspan><tspan fill="#e2ddd6"> ░░░░</tspan><tspan fill="transparent">           </tspan><tspan fill="#e2ddd6">▒████████░ </tspan><tspan fill="#d13030">▒░▒░</tspan><tspan fill="transparent"> </tspan><tspan fill="#e2ddd6">▓███▓</tspan><tspan fill="transparent">     </tspan><tspan fill="#e2ddd6"> </tspan><tspan fill="transparent"> </tspan><tspan fill="#e2ddd6">░███░</tspan><tspan fill="transparent">            </tspan></text>
+        <text x="0" y="153.4" xml:space="preserve"><tspan fill="transparent">      </tspan><tspan fill="#e2ddd6"> ▒▓▒</tspan><tspan fill="transparent">         </tspan><tspan fill="#e2ddd6">▒█████████</tspan><tspan fill="#d13030">▓▒▒▓</tspan><tspan fill="#e2ddd6">█████▒</tspan><tspan fill="transparent">         </tspan><tspan fill="#e2ddd6">███▒</tspan><tspan fill="transparent">            </tspan></text>
+        <text x="0" y="159.3" xml:space="preserve"><tspan fill="transparent">        </tspan><tspan fill="#e2ddd6">░█▓</tspan><tspan fill="transparent">         </tspan><tspan fill="#e2ddd6">▓▓░░░░▓█</tspan><tspan fill="#d13030">█▒▒▓</tspan><tspan fill="#e2ddd6">████▓░</tspan><tspan fill="transparent">          </tspan><tspan fill="#e2ddd6">███░</tspan><tspan fill="transparent">            </tspan></text>
+        <text x="0" y="165.2" xml:space="preserve"><tspan fill="transparent">         </tspan><tspan fill="#e2ddd6">░██░</tspan><tspan fill="transparent">              </tspan><tspan fill="#d13030">░▒▒▓</tspan><tspan fill="#e2ddd6">██░</tspan><tspan fill="transparent">    </tspan><tspan fill="#e2ddd6"> </tspan><tspan fill="transparent">      </tspan><tspan fill="#e2ddd6"> </tspan><tspan fill="transparent"> </tspan><tspan fill="#e2ddd6">▒███</tspan><tspan fill="transparent">             </tspan></text>
+        <text x="0" y="171.1" xml:space="preserve"><tspan fill="transparent">          </tspan><tspan fill="#e2ddd6">▒██░</tspan><tspan fill="transparent">            </tspan><tspan fill="#d13030">▒▒▒▒</tspan><tspan fill="#e2ddd6">████</tspan><tspan fill="transparent">  </tspan><tspan fill="#e2ddd6">▒</tspan><tspan fill="transparent">         </tspan><tspan fill="#e2ddd6">░███░</tspan><tspan fill="transparent">             </tspan></text>
+        <text x="0" y="177.0" xml:space="preserve"><tspan fill="transparent">          </tspan><tspan fill="#e2ddd6">░███</tspan><tspan fill="transparent">           </tspan><tspan fill="#d13030">░░▒▒</tspan><tspan fill="transparent"> </tspan><tspan fill="#e2ddd6">▒███▒</tspan><tspan fill="transparent"> </tspan><tspan fill="#e2ddd6">░▒░ </tspan><tspan fill="transparent">    </tspan><tspan fill="#e2ddd6">░████░</tspan><tspan fill="transparent">              </tspan></text>
+        <text x="0" y="182.9" xml:space="preserve"><tspan fill="transparent">           </tspan><tspan fill="#e2ddd6">▓██▓</tspan><tspan fill="transparent"> </tspan><tspan fill="#e2ddd6"> </tspan><tspan fill="transparent">       </tspan><tspan fill="#d13030">░░▒▒</tspan><tspan fill="#e2ddd6"> </tspan><tspan fill="transparent"> </tspan><tspan fill="#e2ddd6">░███▓</tspan><tspan fill="transparent">  </tspan><tspan fill="#e2ddd6">░▓█▓██████▓ </tspan><tspan fill="transparent">               </tspan></text>
+        <text x="0" y="188.8" xml:space="preserve"><tspan fill="transparent">           </tspan><tspan fill="#e2ddd6"> ███░</tspan><tspan fill="transparent"> </tspan><tspan fill="#e2ddd6"> </tspan><tspan fill="transparent">     </tspan><tspan fill="#d13030">░▒▒▒</tspan><tspan fill="#e2ddd6"> </tspan><tspan fill="transparent">  </tspan><tspan fill="#e2ddd6">░███▓</tspan><tspan fill="transparent">    </tspan><tspan fill="#e2ddd6">░▒▓▓▓▒░</tspan><tspan fill="transparent">                  </tspan></text>
+        <text x="0" y="194.7" xml:space="preserve"><tspan fill="transparent">            </tspan><tspan fill="#e2ddd6">▒███░</tspan><tspan fill="transparent">      </tspan><tspan fill="#d13030">░▒▒</tspan><tspan fill="#e2ddd6"> </tspan><tspan fill="transparent">  </tspan><tspan fill="#e2ddd6">░████░</tspan><tspan fill="transparent">                             </tspan></text>
+        <text x="0" y="200.6" xml:space="preserve"><tspan fill="transparent">             </tspan><tspan fill="#e2ddd6">▒████░</tspan><tspan fill="transparent">   </tspan><tspan fill="#e2ddd6">░</tspan><tspan fill="#d13030">▒▒</tspan><tspan fill="transparent">   </tspan><tspan fill="#e2ddd6">▒████▒</tspan><tspan fill="transparent">                              </tspan></text>
+        <text x="0" y="206.5" xml:space="preserve"><tspan fill="transparent">              </tspan><tspan fill="#e2ddd6">▒█████▓</tspan><tspan fill="#d13030">░▒▒▒</tspan><tspan fill="#e2ddd6">▒██████▒</tspan><tspan fill="transparent">                               </tspan></text>
+        <text x="0" y="212.4" xml:space="preserve"><tspan fill="transparent">               </tspan><tspan fill="#e2ddd6"> ▓████</tspan><tspan fill="#d13030">▓▓</tspan><tspan fill="#e2ddd6">████████░</tspan><tspan fill="transparent">                                </tspan></text>
+        <text x="0" y="218.3" xml:space="preserve"><tspan fill="transparent">                 </tspan><tspan fill="#e2ddd6"> ▒▓</tspan><tspan fill="#d13030">▓▒</tspan><tspan fill="#e2ddd6">██████▒ </tspan><tspan fill="transparent">                                  </tspan></text>
+        <text x="0" y="224.2" xml:space="preserve"><tspan fill="transparent">                </tspan><tspan fill="#e2ddd6"> </tspan><tspan fill="transparent">  </tspan><tspan fill="#d13030">░▒</tspan><tspan fill="#e2ddd6">░░  ░</tspan><tspan fill="transparent">                                      </tspan></text>
+        <text x="0" y="230.1" xml:space="preserve"><tspan fill="transparent">                  </tspan><tspan fill="#d13030">▒▒</tspan><tspan fill="#e2ddd6"> </tspan><tspan fill="transparent">     </tspan><tspan fill="#e2ddd6">░░</tspan><tspan fill="transparent">                                    </tspan></text>
+        <text x="0" y="236.0" xml:space="preserve"><tspan fill="transparent">                 </tspan><tspan fill="#d13030">░░</tspan><tspan fill="transparent">                                             </tspan></text>
+        <text x="0" y="241.9" xml:space="preserve"><tspan fill="transparent">                </tspan><tspan fill="#d13030">░░</tspan><tspan fill="transparent">                                              </tspan></text>
+        <text x="0" y="247.8" xml:space="preserve"><tspan fill="transparent">               </tspan><tspan fill="#e2ddd6">░</tspan><tspan fill="#d13030">░</tspan><tspan fill="transparent">                                               </tspan></text>
+        <text x="0" y="253.7" xml:space="preserve"><tspan fill="transparent">              </tspan><tspan fill="#e2ddd6"> </tspan><tspan fill="#d13030">░</tspan><tspan fill="transparent">                                                </tspan></text>
+        <text x="0" y="259.6" xml:space="preserve"><tspan fill="transparent">              </tspan><tspan fill="#e2ddd6"> </tspan><tspan fill="transparent">                                                 </tspan></text>
+        <text x="0" y="265.5" xml:space="preserve"><tspan fill="transparent">                                                                </tspan></text>
+        <text x="0" y="271.4" xml:space="preserve"><tspan fill="transparent">                                                                </tspan></text>
+        <rect x="116.82" y="72.45" width="3.54" height="5.31" fill="#e2ddd6" class="bkA"/>
+        <rect x="53.10" y="48.85" width="3.54" height="5.31" fill="#e2ddd6" class="bkB"/>
+        <rect x="49.56" y="255.35" width="3.54" height="5.31" fill="#e2ddd6" class="bkC"/>
+        <rect x="123.90" y="78.35" width="3.54" height="5.31" fill="#d13030" class="bkD"/>
+        <rect x="145.14" y="137.35" width="3.54" height="5.31" fill="#e2ddd6" class="bkE"/>
+        <rect x="120.36" y="137.35" width="3.54" height="5.31" fill="#d13030" class="bkF"/>
+        <rect x="145.14" y="78.35" width="3.54" height="5.31" fill="#d13030" class="bkA"/>
+        <rect x="113.28" y="155.05" width="3.54" height="5.31" fill="#e2ddd6" class="bkB"/>
+        <rect x="38.94" y="172.75" width="3.54" height="5.31" fill="#e2ddd6" class="bkC"/>
+        <rect x="88.50" y="178.65" width="3.54" height="5.31" fill="#d13030" class="bkD"/>
+        <rect x="138.06" y="131.45" width="3.54" height="5.31" fill="#e2ddd6" class="bkE"/>
+        <rect x="92.04" y="66.55" width="3.54" height="5.31" fill="#d13030" class="bkF"/>
+        <rect x="123.90" y="72.45" width="3.54" height="5.31" fill="#d13030" class="bkA"/>
+        <rect x="109.74" y="172.75" width="3.54" height="5.31" fill="#e2ddd6" class="bkB"/>
+        <rect x="159.30" y="101.95" width="3.54" height="5.31" fill="#e2ddd6" class="bkC"/>
+        <rect x="70.80" y="66.55" width="3.54" height="5.31" fill="#d13030" class="bkD"/>
+        <rect x="60.18" y="202.25" width="3.54" height="5.31" fill="#e2ddd6" class="bkE"/>
+        <rect x="116.82" y="149.15" width="3.54" height="5.31" fill="#e2ddd6" class="bkF"/>
+        <rect x="130.98" y="90.15" width="3.54" height="5.31" fill="#e2ddd6" class="bkA"/>
+        <rect x="109.74" y="155.05" width="3.54" height="5.31" fill="#d13030" class="bkB"/>
+        <rect x="49.56" y="90.15" width="3.54" height="5.31" fill="#d13030" class="bkC"/>
+        <rect x="116.82" y="137.35" width="3.54" height="5.31" fill="#d13030" class="bkD"/>
+    </g>
+  </g>
+
+  <!-- LEFT meta under box -->
+  <g transform="translate(40, 424)" font-family="'JetBrains Mono','Courier New',monospace" font-size="8.5">
+    <text x="0" y="0" fill="var(--text-secondary)">trishul_sigil.asc  <tspan fill="var(--text-tertiary)">// 64x47 dithered</tspan></text>
+  </g>
+
+  <!-- RIGHT PANEL -->
+  <g transform="translate(300, 92)" font-family="'JetBrains Mono','Courier New',monospace" font-size="10" fill="var(--text-primary)">
+    <text x="0" y="8" fill="var(--red)" font-weight="bold">--[ 0x00 - whoami ]--------------------------</text>
+    <g transform="translate(0,14)">
+      <text x="0" y="12"><tspan fill="var(--text-secondary)">user</tspan><tspan fill="var(--text-tertiary)"> ..... </tspan>trishul</text>
+      <text x="0" y="24"><tspan fill="var(--text-secondary)">role</tspan><tspan fill="var(--text-tertiary)"> ..... </tspan>offensive sec</text>
+      <text x="0" y="36"><tspan fill="var(--text-secondary)">geo</tspan><tspan fill="var(--text-tertiary)"> ...... </tspan>brazil [-13.3737]</text>
+      <text x="0" y="48"><tspan fill="var(--text-secondary)">host</tspan><tspan fill="var(--text-tertiary)"> ..... </tspan>fedora</text>
+      <text x="0" y="60"><tspan fill="var(--text-secondary)">editor</tspan><tspan fill="var(--text-tertiary)"> ... </tspan>neovim</text>
+      <text x="0" y="72"><tspan fill="var(--text-secondary)">focus</tspan><tspan fill="var(--text-tertiary)"> .... </tspan>adversary emulation, C2 dev</text>
+      <text x="0" y="84"><tspan fill="var(--text-secondary)">langs</tspan><tspan fill="var(--text-tertiary)"> .... </tspan>C, Python, ASM, JavaScript</text>
+      <text x="0" y="96"><tspan fill="var(--text-secondary)">c2</tspan><tspan fill="var(--text-tertiary)"> ....... </tspan>hermes (self-hosted)</text>
+      <text x="0" y="108"><tspan fill="var(--text-secondary)">writeups</tspan><tspan fill="var(--text-tertiary)"> . </tspan><tspan fill="var(--red)">writeups.trishul.re</tspan></text>
+      <text x="0" y="120"><tspan fill="var(--text-secondary)">sleep</tspan><tspan fill="var(--text-tertiary)"> .... </tspan><tspan fill="var(--text-secondary)">13:37</tspan></text>
+      <g transform="translate(0,132)">
+        <text x="0" y="0" class="la"><tspan fill="var(--text-secondary)">uptime</tspan><tspan fill="var(--text-tertiary)"> ... </tspan>24mo roadmap // day 0x1a3</text>
+        <text x="0" y="0" class="lb" opacity="0"><tspan fill="var(--text-secondary)">uptime</tspan><tspan fill="var(--text-tertiary)"> ... </tspan>24mo roadmap // grinding</text>
+        <text x="0" y="0" class="lc" opacity="0"><tspan fill="var(--text-secondary)">uptime</tspan><tspan fill="var(--text-tertiary)"> ... </tspan>24mo roadmap // patience</text>
+      </g>
+    </g>
+
+    <text x="0" y="182" fill="var(--red-deep)" font-weight="bold">--[ 0x01 - arsenal ]-------------------------</text>
+    <g transform="translate(0,188)">
+      <text x="0" y="14"><tspan fill="var(--red)">[+]</tspan> <tspan fill="var(--bone)" font-weight="bold">Burp</tspan> <tspan fill="var(--red)">--&gt; focusing now (web exploitation)</tspan></text>
+      <text x="0" y="28"><tspan fill="var(--red)">[+]</tspan> <tspan fill="var(--text-primary)">Ghidra</tspan><tspan fill="var(--text-tertiary)"> - malware analysis</tspan></text>
+      <text x="0" y="42"><tspan fill="var(--red)">[+]</tspan> <tspan fill="var(--text-primary)">Netexec</tspan><tspan fill="var(--text-tertiary)"> - AD / lateral movement</tspan></text>
+      <text x="0" y="56"><tspan fill="var(--red)">[+]</tspan> <tspan fill="var(--text-primary)">Bloodhound</tspan><tspan fill="var(--text-tertiary)"> - AD attack paths</tspan></text>
+      <text x="0" y="70"><tspan fill="var(--red)">[+]</tspan> <tspan fill="var(--text-primary)">Linux</tspan><tspan fill="var(--text-tertiary)"> - privesc &amp; tooling</tspan></text>
+    </g>
+  </g>
+
+  <!-- FOOTER -->
+  <g transform="translate(40, 424)" font-family="'JetBrains Mono','Courier New',monospace" font-size="9">
+    <g transform="translate(232,-8)">
+      <text x="20" y="0" fill="var(--text-secondary)" class="hn">SIG: <tspan fill="var(--text-tertiary)">0x49FC189A05A3A142 // trishul.re :: 93932</tspan></text>
+      <text x="20" y="0" fill="var(--text-secondary)" class="hc" opacity="0">SIG: <tspan fill="var(--text-tertiary)">0xSEGV_ERR // reconnecting...</tspan></text>
+      <text x="20" y="13" fill="var(--text-tertiary)">EOF // <tspan fill="var(--red)">the third eye sees past the null byte</tspan> <tspan fill="var(--red)" class="cur">█</tspan></text>
+    </g>
+  </g>
+
+  <g opacity="0.28" fill="none" stroke-width="0.8">
+    <path d="M 12,12 H 24 M 12,12 V 24" stroke="var(--red)"/>
+    <path d="M 708,12 H 696 M 708,12 V 24" stroke="var(--red-deep)"/>
+    <path d="M 12,428 H 24 M 12,428 V 416" stroke="var(--red-deep)"/>
+    <path d="M 708,428 H 696 M 708,428 V 416" stroke="var(--red)"/>
+  </g>
+</svg>
