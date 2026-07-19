@@ -1,49 +1,7 @@
-<table>
-<tr>
-<td valign="top">
-<pre>
- ┌──(trishul@trishul)-[~]
- └─$ ./trishul init
-  ╔════════════════════════════════════════════════╗
-  ║                                                ║ 
-  ║ ___________      .__       .__          .__    ║ 
-  ║ \__    ___/______|__| _____|  |__  __ __|  |   ║
-  ║   |    |  \_  __ \  |/  ___/  |  \|  |  \  |   ║ 
-  ║   |    |   |  | \/  |\___ \|   Y  \  |  /  |__ ║
-  ║   |____|   |__|  |__/____  &gt;___|  /____/|____/ ║ 
-  ║                          \/     \/             ║
-  ║                                                ║ 
-  ╚════════════════════════════════════════════════╝ 
-  [*] initializing operator profile ...
-  [+] offensive security     loaded 
-  [+] adversary emulation    loaded                          
-  [+] malware researching    loaded
-  [i] 3 modules ready — standing by
+![trishul](./assets/trishul_profile.svg)
 
-
-  └─$ _ 
-
-  
-</pre>
-<b>// stack</b><br/>
-<img src="https://img.shields.io/badge/C-1c1c1c?style=flat-square&logo=c&logoColor=white" />
-<img src="https://img.shields.io/badge/Python-1c1c1c?style=flat-square&logo=python&logoColor=white" />
-<img src="https://img.shields.io/badge/Rust-1c1c1c?style=flat-square&logo=rust&logoColor=white" />
-<img src="https://img.shields.io/badge/x86--64_ASM-1c1c1c?style=flat-square&logoColor=white" />
-<img src="https://img.shields.io/badge/Bash-1c1c1c?style=flat-square&logo=gnubash&logoColor=white" />
-<img src="https://img.shields.io/badge/JavaScript-1c1c1c?style=flat-square&logo=javascript&logoColor=white" />
-<br/><br/>
-<b>// arsenal</b><br/>
-<img src="https://img.shields.io/badge/Ghidra-1c1c1c?style=flat-square&logo=ghidra&logoColor=white" />
-<img src="https://img.shields.io/badge/NetExec-1c1c1c?style=flat-square&logoColor=white" />
-<img src="https://img.shields.io/badge/BloodHound-1c1c1c?style=flat-square&logoColor=white" />
-<img src="https://img.shields.io/badge/Linux-1c1c1c?style=flat-square&logo=linux&logoColor=white" />
-<br/><br/>
-
-</td>
-<td valign="">
-
- <img width="520" height="800" alt="Image" src="https://github.com/user-attachments/assets/879a0350-b2a4-45cd-9211-1d3f9860e185" /> 
-</td>
-</tr>
-</table>
+<p align="center">
+  <a href="https://trishul.re"><img src="./assets/site.svg" alt="site"></a>
+  <a href="https://writeups.trishul.re"><img src="./assets/writeups.svg" alt="writeups"></a>
+  <a href="mailto:contact@trishul.re"><img src="./assets/contact.svg" alt="contact"></a>
+</p>
