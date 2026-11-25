@@ -1,4 +1,4 @@
-![trishul](./assets/sxfv2_profile.svg)
+![trishul](./assets/sxfv2_profile_v2.svg)
 
 <p align="center">
   <a href="https://trishul.re"><img src="./assets/site_shivaita.svg" alt="site"></a>
